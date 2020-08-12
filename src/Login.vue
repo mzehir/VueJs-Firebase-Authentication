@@ -3,15 +3,15 @@
     <div class="container-fluid">
       <div class="row">
         <form
-          class="card pl-0 pr-0 col-sm-12 col-md-4 offset-md-4 border-success shadow-lg"
+          class="card pl-0 pr-0 col-sm-12 col-md-4 offset-md-4 border-success shadow-lg animated zoomIn"
           @submit.prevent="onSubmit"
         >
-          <div class="card-header shadow-lg m-3 bg-success text-white pt-3">
+          <div class="card-header shadow-lg m-3 bg-success text-white pt-3 animated backInDown">
             <label>Oturum Açma Formu</label>
           </div>
 
           <div class="card-body mr-3">
-            <div class="form-group row">
+            <div class="form-group row animated backInLeft">
               <label class="col-md-3 text-left">E-posta:</label>
               <input
                 v-model="user.email"
@@ -20,7 +20,7 @@
                 placeholder="E-posta adresinizi giriniz"
               />
             </div>
-            <div class="form-group row">
+            <div class="form-group row animated backInRight">
               <label class="col-md-3 text-left">Şifre:</label>
               <input
                 v-model="user.password"
@@ -32,15 +32,23 @@
             <div class="row">
               <button
                 type="submit"
-                class="btn btn-outline-success col-sm-12 col-md-4 offset-md-4"
+                class="btn btn-outline-success col-sm-12 col-md-4 offset-md-4 animated flash"
               >Oturum Aç</button>
             </div>
           </div>
 
           <div class="card-footer m-0 p-3">
             <div class="row">
-              <router-link class="col-md-6 text-primary" tag="a" to="/register">Yeni Üye Kaydı</router-link>
-              <router-link class="col-md-6 text-danger" tag="a" to="/passwordreset">Parolamı Unuttum</router-link>
+              <router-link
+                class="col-md-6 text-primary animated heartBeat"
+                tag="a"
+                to="/register"
+              >Yeni Üye Kaydı</router-link>
+              <router-link
+                class="col-md-6 text-danger animated heartBeat"
+                tag="a"
+                to="/passwordreset"
+              >Parolamı Unuttum</router-link>
             </div>
           </div>
         </form>

@@ -3,15 +3,15 @@
     <div class="container-fluid">
       <div class="row">
         <form
-          class="card pl-0 pr-0 col-sm-12 col-md-4 offset-md-4 border-danger shadow-lg"
+          class="card pl-0 pr-0 col-sm-12 col-md-4 offset-md-4 border-danger shadow-lg animated zoomIn"
           @submit.prevent="onSubmit"
         >
-          <div class="card-header shadow-lg m-3 bg-danger text-white pt-3">
+          <div class="card-header shadow-lg m-3 bg-danger text-white pt-3 animated backInDown">
             <label>Parola Sıfırlama Formu</label>
           </div>
 
           <div class="card-body mr-3">
-            <div class="form-group row">
+            <div class="form-group row animated backInLeft">
               <label class="col-md-3 text-left">E-posta:</label>
               <input
                 v-model="user.email"
@@ -23,15 +23,23 @@
             <div class="row">
               <button
                 type="submit"
-                class="btn btn-outline-danger col-sm-12 col-md-4 offset-md-4"
+                class="btn btn-outline-danger col-sm-12 col-md-4 offset-md-4 animated flash"
               >Parola Sıfırla</button>
             </div>
           </div>
 
           <div class="card-footer m-0 p-3">
             <div class="row">
-              <router-link class="col-md-6 text-success" tag="a" to="/login">Zaten Üyeyim</router-link>
-              <router-link class="col-md-6 text-primary" tag="a" to="/login">Yeni Üye Kaydı</router-link>
+              <router-link
+                class="col-md-6 text-success animated heartBeat"
+                tag="a"
+                to="/login"
+              >Zaten Üyeyim</router-link>
+              <router-link
+                class="col-md-6 text-primary animated heartBeat"
+                tag="a"
+                to="/login"
+              >Yeni Üye Kaydı</router-link>
             </div>
           </div>
         </form>

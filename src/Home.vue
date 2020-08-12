@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid">
     <div class="row text-center mt-3">
-      <div class="col-sm-3">
+      <div class="col-sm-3 animated flipInX">
         <div class="card shadow-lg">
           <div class="card-body">
             <h5 class="card-title">
@@ -18,7 +18,7 @@
         </div>
       </div>
 
-      <div class="col-sm-6">
+      <div class="col-sm-6 animated flipInX">
         <div class="card">
           <div class="card-body text-left">
             <h5 class="card-title text-center">VueJs - Firebase Authentication</h5>
@@ -27,12 +27,19 @@
               Bu işlemler sırasında
               <strong>vuex, axios, vue-router ve firebase kullanılmıştır.</strong>
             </p>
-            <p>Projenin github linkine buradan ulaşabilir ve aşağıdaki fotoğraf galerisinden proje içeriğini inceleyebilirsiniz.</p>
+            <p>
+              Projenin github linkine
+              <a
+                href="https://github.com/mzehir/VueJs-Firebase-Authentication"
+              >
+                <strong>buradan</strong>
+              </a> ulaşabilir ve aşağıdaki fotoğraf galerisinden proje içeriğini inceleyebilirsiniz.
+            </p>
           </div>
         </div>
       </div>
 
-      <div class="col-sm-3">
+      <div class="col-sm-3 animated flipInX">
         <div class="card shadow-lg">
           <div class="card-body">
             <h5 class="card-title">
@@ -130,6 +137,7 @@ export default {
       user: {
         newPassword: "",
       },
+      projectLink: "https://github.com/mzehir/VueJs-Firebase-Authentication",
     };
   },
 };
