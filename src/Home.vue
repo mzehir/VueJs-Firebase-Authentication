@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid">
     <div class="row text-center mt-3">
-      <div class="col-sm-3 animated flipInX">
+      <div class="col-sm-3 mt-2 animated flipInX">
         <div class="card shadow-lg">
           <div class="card-body">
             <h5 class="card-title">
@@ -18,7 +18,7 @@
         </div>
       </div>
 
-      <div class="col-sm-6 animated flipInX">
+      <div class="col-sm-6 mt-2 animated flipInX">
         <div class="card">
           <div class="card-body text-left">
             <h5 class="card-title text-center">VueJs - Firebase Authentication</h5>
@@ -39,7 +39,7 @@
         </div>
       </div>
 
-      <div class="col-sm-3 animated flipInX">
+      <div class="col-sm-3 mt-2 animated flipInX">
         <div class="card shadow-lg">
           <div class="card-body">
             <h5 class="card-title">
