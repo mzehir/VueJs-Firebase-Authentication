@@ -44,13 +44,13 @@ const store = new Vuex.Store({
                 dispatch("localStorageIntegerRemainingTime");
                 router.push("/home")
             } else {
-                router.push("/login");
-                return false
+                router.push("/login").catch(() => { });
+
             }
             //Bu fonksiyon ile sayfa yenilenmelerinde otomatik oturum kapatmaların önüne geçilir.
         },
 
-        signUp({ commit, dispatch, state }, data) {
+        signUp({ commit }, data) {
             return axios
                 .post(
                     "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyBRZbXmXrDEsV47Y3Qti0HoeKJqjXiWFSM",
@@ -88,12 +88,12 @@ const store = new Vuex.Store({
             // Bu fonksiyon ile kullanıcı oturum açar.
         },
 
-        logout({ commit, dispatch, state }) {
+        logout({ commit, state }) {
             commit("clearToken");
             localStorage.removeItem("token");
 
             state.remainingTime = 1
-            router.replace("/login")
+            router.push("/login").catch(() => { });
             // Bu fonksiyon ile kullanıcı oturumu kapatılır.
         },
 
@@ -106,12 +106,12 @@ const store = new Vuex.Store({
                         requestType: "PASSWORD_RESET"
                     }
                 ).then((response) => {
-                    console.log(response)
+                    router.push("/login");
                 })
             // Bu fonksiyon ile unutulan parola sıfırlanır.(Gerçek email kayıtları)
         },
 
-        passwordRefnesh({ commit, dispatch, state }, data) {
+        passwordRefnesh({ state }, data) {
             return axios
                 .post(
                     "https://identitytoolkit.googleapis.com/v1/accounts:update?key=AIzaSyBRZbXmXrDEsV47Y3Qti0HoeKJqjXiWFSM",
@@ -125,8 +125,7 @@ const store = new Vuex.Store({
             // Oturum açan kullanıcının şifre değiştirmesini sağlar.
         },
 
-        deleteUser({ commit, dispatch, state }) {
-            console.log(state.token)
+        deleteUser({ dispatch, state }) {
             return axios
                 .post(
                     "https://identitytoolkit.googleapis.com/v1/accounts:delete?key=AIzaSyBRZbXmXrDEsV47Y3Qti0HoeKJqjXiWFSM",
@@ -134,13 +133,12 @@ const store = new Vuex.Store({
                         idToken: state.token
                     }
                 ).then((response) => {
-                    console.log(response)
                     dispatch("logout")
                 })
             // Oturum açan kullanıcının hesabı firebase'den silinir.
         },
 
-        userTimeOut({ commit, dispatch, state }) {
+        userTimeOut({ dispatch, state }) {
             var setInterval1 = setInterval(() => {
 
                 state.remainingTime -= 1;

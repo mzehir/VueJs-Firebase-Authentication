@@ -104,8 +104,7 @@ export default {
   methods: {
     logOut() {
       this.$store.dispatch("logout");
-      this.$router.replace("/login");
-      // Store.js'deki oturum kapatma fonksiyonunu tetikler. Daha sonra kullanıcıyı oturum açma sayfasına yönlendiri.
+      // Store.js'deki oturum kapatma fonksiyonunu tetikler.
     },
     passwordRefnesh() {
       this.$store

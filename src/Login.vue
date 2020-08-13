@@ -3,7 +3,7 @@
     <div class="container-fluid">
       <div class="row">
         <form
-          class="card pl-0 pr-0 col-sm-12 col-md-4 offset-md-4 border-success shadow-lg animated zoomIn"
+          class="card pl-0 pr-0 col-xs-12 col-sm-12 col-md-4 offset-md-4 border-success shadow-lg animated zoomIn"
           @submit.prevent="onSubmit"
         >
           <div class="card-header shadow-lg m-3 bg-success text-white pt-3 animated backInDown">

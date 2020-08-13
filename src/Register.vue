@@ -3,7 +3,7 @@
     <div class="container-fluid">
       <div class="row">
         <form
-          class="card pl-0 pr-0 col-sm-12 col-md-4 offset-md-4 border-primary shadow-lg animated zoomIn"
+          class="card pl-0 pr-0 col-xs-12 col-sm-12 col-md-4 offset-md-4 border-primary shadow-lg animated zoomIn"
           @submit.prevent="onSubmit"
         >
           <div class="card-header shadow-lg m-3 bg-primary text-white pt-3 animated backInDown">
@@ -62,7 +62,7 @@ export default {
   methods: {
     onSubmit() {
       this.$store.dispatch("signUp", { ...this.user }).then((response) => {
-        alert("Üye kaydı oluştulmuştur.");
+        alert("Üye kaydı oluşturulmuştur.");
         this.$router.push("/login");
       });
       // Store.js'deki kullancı kaydı fonksiyonuna kullanıcı bilgilerini gönderir ve fonksiyonu tetikler. Daha sonra kullanıcıyı oturum açma sayfasına yönlendirir.
