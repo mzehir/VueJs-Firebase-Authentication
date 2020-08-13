@@ -6,9 +6,7 @@
           class="card pl-0 pr-0 col-xs-12 col-sm-12 col-md-4 offset-md-4 border-danger shadow-lg animated zoomIn"
           @submit.prevent="onSubmit"
         >
-          <div
-            class="card-header shadow-lg m-3 bg-danger text-center text-white pt-3 animated backInDown"
-          >
+          <div class="card-header shadow-lg m-3 bg-danger text-white pt-3 animated backInDown">
             <label>Parola Sıfırlama Formu</label>
           </div>
 

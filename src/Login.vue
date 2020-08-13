@@ -20,7 +20,7 @@
                 placeholder="E-posta adresinizi giriniz"
               />
             </div>
-            <div class="form-group row animated backInRight">
+            <div class="form-group row animated backInLeft">
               <label class="col-md-3 text-left">Şifre:</label>
               <input
                 v-model="user.password"

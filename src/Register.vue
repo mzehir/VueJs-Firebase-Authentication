@@ -20,7 +20,7 @@
                 placeholder="E-posta adresinizi giriniz"
               />
             </div>
-            <div class="form-group row animated backInRight">
+            <div class="form-group row animated backInLeft">
               <label class="col-md-3 text-left">Şifre:</label>
               <input
                 v-model="user.password"
@@ -39,8 +39,16 @@
 
           <div class="card-footer m-0 p-3">
             <div class="row">
-              <router-link class="col-md-6 text-success animated heartBeat" tag="a" to="/login">Zaten Üyeyim</router-link>
-              <router-link class="col-md-6 text-danger animated heartBeat" tag="a" to="/passwordreset">Parolamı Unuttum</router-link>
+              <router-link
+                class="col-md-6 text-success animated heartBeat"
+                tag="a"
+                to="/login"
+              >Zaten Üyeyim</router-link>
+              <router-link
+                class="col-md-6 text-danger animated heartBeat"
+                tag="a"
+                to="/passwordreset"
+              >Parolamı Unuttum</router-link>
             </div>
           </div>
         </form>
